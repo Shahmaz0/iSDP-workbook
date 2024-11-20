@@ -72,18 +72,51 @@
         <!--Green-->
         <scene sceneID="9TO-CO-5PR">
             <objects>
-                <viewController id="fgh-YM-Heh" sceneMemberID="viewController">
+                <viewController id="fgh-YM-Heh" customClass="GreenViewController" customModule="ProgrammaticSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BhG-EK-NII">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pht-T6-EDR">
+                                <rect key="frame" x="148" y="315" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ql4-pF-Uy7"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Green" id="SoP-xl-Sd0"/>
+                    <navigationItem key="navigationItem" title="Green" id="SoP-xl-Sd0">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="LwW-tm-82K">
+                            <connections>
+                                <segue destination="e5L-TC-DUd" kind="show" id="ztJ-3u-5Jj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="Pht-T6-EDR" id="yu7-x8-r2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G1s-4a-2qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2202.290076335878" y="370.42253521126764"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eNW-wD-JwI">
+            <objects>
+                <viewController id="e5L-TC-DUd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vcC-xo-aO3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xIR-kz-Piv"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C3s-Ll-xOe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lHC-wL-dq8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3021" y="370"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XG1-jA-HET">
@@ -107,6 +140,9 @@
     <resources>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
